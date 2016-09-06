@@ -1,17 +1,14 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const MyTitle = require('./MyTitle');
 
-class MyFirstComponent extends React.Component {
-  render () {
-    return (
-        <div>
-          <MyTitle title='Props are great!' color='rebeccapurple' />
-          <MyTitle title='Use props everywhere!' color='mediumaquamarine' />
-          <MyTitle title='Props are the best!' color='peru' />
-        </div>
-    );
-  }
-};
+const App = () => (
+  <div className="app-container">
+    <div className="home-info">
+      <h1 className="title">svideo</h1>
+      <input className="search" type="text" placeholder="Search..." />
+      <button className="browse-all"> or Browse All</button>
+    </div>
+  </div>
+);
 
-ReactDOM.render(<MyFirstComponent />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
